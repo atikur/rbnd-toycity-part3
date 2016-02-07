@@ -1,0 +1,21 @@
+1.How long did you spend working on this project?
+
+I spent about 2-3 hours to complete the project.
+
+2. What was the most rewarding challenge you conquered?
+
+I have experience with other programming languages. So the project 
+wasn't much challenging for me. But I enjoyed writing code in Ruby.
+
+3. What two additional features did you build? Why?
+
+a) Transactions history for user: It allows user to print his transactions history.
+b) Return product: If user isn’t satisfied with a product, he can return it.
+
+4. Where do you still have room to grow?
+
+Possible improvements -
+
+a) Handling errors for edge cases
+b) Saving transactions history to file
+c) Add more details to products/customers
