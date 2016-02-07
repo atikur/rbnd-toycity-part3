@@ -17,4 +17,13 @@ class Product
 	def self.all
 		@@products
 	end
+
+	def self.find_by_title(title)
+		@@products.each do |product|
+			if product.title == title
+				return product
+			end
+		end
+		return nil
+	end
 end
