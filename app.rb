@@ -62,6 +62,11 @@ puts Transaction.all.count # Should return 2
 transaction2 = Transaction.find(2)
 puts transaction2.product == nanoblock # Should return true
 
+# Transaction history
+walter.print_transactions_history
+
+# Return Item
+walter.return(1)
 walter.print_transactions_history
 
 #walter.purchase(firehouse)

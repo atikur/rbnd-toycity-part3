@@ -19,6 +19,17 @@ class Customer
 		Transaction.new(self, product)
 	end
 
+	def return(transaction_id)
+		transaction = Transaction.find(transaction_id)
+
+		if transaction == nil || transaction.customer != self
+			return
+		end
+		
+		transaction.product.return
+		Transaction.all.delete(transaction)
+	end
+
 	def print_transactions_history
 		transactions = Transaction.all.select { |transaction| transaction.customer == self }
 
