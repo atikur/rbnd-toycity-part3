@@ -20,6 +20,13 @@ class Product
 		return @stock > 0
 	end
 
+	def sell
+		if !in_stock?
+			raise OutOfStockError, "#{@title} is out of stock."
+		end
+		@stock -= 1
+	end
+
 	def self.all
 		@@products
 	end
