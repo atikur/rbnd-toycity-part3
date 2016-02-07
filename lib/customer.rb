@@ -15,6 +15,10 @@ class Customer
 		@@customers << self
 	end
 
+	def purchase(product)
+		Transaction.new(self, product)
+	end
+
 	def self.find_by_name(name)
 		@@customers.select do |customer| 
 			if customer.name == name
