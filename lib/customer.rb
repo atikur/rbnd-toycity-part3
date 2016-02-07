@@ -20,7 +20,7 @@ class Customer
 	end
 
 	def self.find_by_name(name)
-		@@customers.select do |customer| 
+		@@customers.each do |customer| 
 			if customer.name == name
 				return customer
 			end

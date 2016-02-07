@@ -17,4 +17,13 @@ class Transaction
 	def self.all
 		@@transactions
 	end
+
+	def self.find(id)
+		@@transactions.each do |transaction|
+			if transaction.id == id
+				return transaction
+			end
+		end
+		return nil
+	end
 end
