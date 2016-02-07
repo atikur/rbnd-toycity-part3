@@ -19,6 +19,18 @@ class Customer
 		Transaction.new(self, product)
 	end
 
+	def print_transactions_history
+		transactions = Transaction.all.select { |transaction| transaction.customer == self }
+
+		puts "------------------------------------"
+		puts "Transaction History (#{@name})"
+		puts "------------------------------------"
+
+		transactions.each do |transaction|
+			puts "Transaction ID: #{transaction.id}, Product: #{transaction.product.title}"
+		end
+	end
+
 	def self.find_by_name(name)
 		@@customers.each do |customer| 
 			if customer.name == name
