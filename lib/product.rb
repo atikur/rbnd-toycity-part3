@@ -1,9 +1,11 @@
 class Product
-	attr_reader :title
+	attr_reader :title, :price, :stock
 	@@products = []
 
 	def initialize(options={})
 		@title = options[:title]
+		@price = options[:price]
+		@stock = options[:stock]
 		add_to_products
 	end
 
@@ -12,6 +14,10 @@ class Product
 			raise DuplicateProductError, "#{@title} already exists."
 		end
 		@@products << self
+	end
+
+	def in_stock?
+		return @stock > 0
 	end
 
 	def self.all
